@@ -1,4 +1,4 @@
-var playerName = "Jason"
+var playerName = ""
 var playerQuestion = "Will it rain tomorrow?"
 var randomNumber = Int.random(in: 1...9)
 var eightBall: String
@@ -28,5 +28,8 @@ switch randomNumber {
   eightBall = "Error"
 }
 
+playerName == "" ? 
+print("\(playerQuestion)") :
 print("\(playerName) asks: \(playerQuestion)")
+
 print("Magic 8 Ball's answer: \(eightBall)")
