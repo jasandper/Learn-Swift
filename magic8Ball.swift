@@ -1,4 +1,4 @@
-var playerName = ""
+var playerName = "Jason"
 var playerQuestion = "Will it rain tomorrow?"
 var randomNumber = Int.random(in: 1...9)
 var eightBall: String
