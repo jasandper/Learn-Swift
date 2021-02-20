@@ -1,5 +1,5 @@
-var englishText = "this is a secret message"
-var secretMessage = ".... --- .-- -.. -.--   .--. .- .-. - -. . .-."
+var englishText = "THIS IS A SECRET MESSAGE".lowercased()
+var secretMessage = ".... --- .-- -.. -.--   .--. .- .-. - -. . .-. .-.-.-"
 var letterToMorse = [
   "a" : ".-",
   "b" : "-...",
@@ -26,7 +26,11 @@ var letterToMorse = [
   "w" : ".--",
   "x" : "-..-",
   "y" : "-.--",
-  "z" : "--.."
+  "z" : "--..",
+  ".": ".-.-.-",
+  "?": "..--..",
+  ",": "--..--",
+  "!": "-.-.--"
 ]
 
 //// Convert englishText to a string of morse code
@@ -65,7 +69,7 @@ for char in secretMessage {
     }
 }
 morseCodeArray.append(currMorse)
-print(morseCodeArray)
+// print(morseCodeArray)
 
 // Decode morseCodeArray
 
@@ -76,15 +80,38 @@ for (letter, morse) in letterToMorse {
     morseToLetter[morse] = letter
 }
 
-// decode 
 for morse in morseCodeArray {
-    if let englishLetter = morseToLetter[morse] {
+    if let englishLetter = morseToLetter[morse] {  
         decodedMessage += englishLetter
     } else {
         decodedMessage += " "
     }
 }
+
 print(decodedMessage)
+
+// Capitalize first word in a sentence of decoded message
+
+// for char in decodedMessage {
+//     if char == "." {
+//         decodedMessage.index(0).uppercased()
+//     }
+// }
+
+// print(decodedMessage)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
