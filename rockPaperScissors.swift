@@ -19,4 +19,38 @@ func getComputerChoice () -> String {
 }
 
 
+func determineWinner (_ userChoice: String, _ compChoice: String) -> String {
+    let decision = "It's a tie"
+
+    switch userChoice {
+        case "rock":
+            if compChoice == "paper" {
+                return "The computer won"
+            } else if compChoice == "scissors" {
+                return "The user won"
+            }
+
+        case "paper":
+            if compChoice == "rock" {
+                return "The user won"
+            } else if compChoice == "scissors" {
+                return "The computer won"
+            }
+
+        case "scissors":
+            if compChoice == "rock" {
+                return "The computer won"
+            } else if compChoice == "paper" {
+                return "The user won"
+            }
+
+        default: 
+            return "Something went wrong"
+    }
+    return decision
+}
+
+
+
+
 
