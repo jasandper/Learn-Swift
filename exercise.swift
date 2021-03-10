@@ -16,4 +16,5 @@ struct Exercise {
 }
 
 var pushUps = Exercise(name: "Push up", muscleGroups: ["chest", "triceps", "shoulders"], reps: 25, sets: 4)
-print(pushUps)
+var sitUps = Exercise(name: "Sit up", muscleGroups: ["abdominals", "chest", "lower back", "obliques"], reps: 30, sets: 3)
+var squats = Exercise(name: "Squat", muscleGroups: ["quadraceps", "hamstrings", "glutes"], reps: 20, sets: 4)
