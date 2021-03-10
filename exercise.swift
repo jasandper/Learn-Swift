@@ -37,7 +37,15 @@ struct Regimen {
             print("This is a total of \(exercise.totalReps) \(exercise.name)s")
         }
     }
+
+    mutating func addExercises (newExercises: [Exercise]) {
+        self.exercises.append(contentsOf: newExercises)
+    }
 }
 
+// Regimen Instances
 var mondayRegimen = Regimen(dayOfWeek: "Monday", exercises: [pushUps])
+
+// Add an execise to Monday's Regimen
+mondayRegimen.addExercises(newExercises: [squats, sitUps])
 mondayRegimen.printExercisePlan()
