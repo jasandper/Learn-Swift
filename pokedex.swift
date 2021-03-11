@@ -21,6 +21,29 @@ class Pokemon {
     }
 }
 
+// Subclass Gigantamax Pokemon
+class GigantamaxPokemon: Pokemon {
+    var location = ""
+
+    init(num: Int, name: String, type: [String], ability: [String]) {
+        self.location = location
+        super.init(num: num, name: name, type: type, ability: ability)
+    }
+
+    override func displayInfo() {
+        print("No.         \(self.num)")
+        print("Name:       \(self.name)")
+        print("Type:       \(self.type)")
+        print("Abilities:  \(self.ability)")
+        print("Location:   \(self.location)")
+        print("================================")
+    }
+}
+
+
+
+
 var bulbasaur = Pokemon(num: 1, name: "Bulbasaur", type: ["Grass 🌱", "Poison ☠️"], ability: ["Overgrow"])
+
 
 bulbasaur.displayInfo()
